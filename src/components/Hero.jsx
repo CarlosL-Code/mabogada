@@ -8,17 +8,17 @@ const Hero = () => {
     {
       title: "Expertos legales en constitución de empresas",
       desc: "Constituimos sociedades extranjeras en Chile. Trabajamos de manera estrecha con el cliente en cada etapa.",
-      bg: "/src/assets/hero-1.jpg"
+      bg: "/images/hero-1.jpg"
     },
     {
       title: "Asesoría integral para inversión extranjera",
       desc: "Representación legal y judicial de confianza para operar en cualquier región del país mediante servicios integrales.",
-      bg: "/src/assets/hero-2.jpg"
+      bg: "/images/hero-2.jpg"
     },
     {
       title: "Procesos ágiles y con total seguridad",
       desc: "Gestión experta ante SII, municipalidades y entidades gubernamentales para iniciar sus operaciones rápidamente.",
-      bg: "/src/assets/hero-3.jpg"
+      bg: "/images/hero-3.jpg"
     }
   ];
 

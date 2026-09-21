@@ -9,7 +9,7 @@
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   /* Utiliza la imagen que dejó el usuario en assets */
-  background-image: url('/src/assets/fondo-cta-final.jpg');
+  background-image: url('/images/fondo-cta-final.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Parallax effect */

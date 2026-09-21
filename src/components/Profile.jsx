@@ -29,7 +29,7 @@ const Profile = () => {
       <div className="split-right profile-image-wrapper">
         {/* Utilizamos la imagen real proporcionada por el usuario */}
         <img 
-          src="/src/assets/claudia.jpg" 
+          src="/images/claudia.jpg" 
           alt="Claudia Mendoza Melo" 
           className="profile-img-real" 
         />
