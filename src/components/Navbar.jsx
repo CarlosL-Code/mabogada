@@ -63,10 +63,17 @@ const Navbar = () => {
         <button 
           className="mobile-menu-btn"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          style={{ zIndex: 1001, position: 'relative' }}
         >
           <Icon icon={isMobileMenuOpen ? "mdi:close" : "mdi:menu"} width="28" />
         </button>
       </div>
+
+      {/* Overlay del menú móvil */}
+      <div 
+        className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`}
+        onClick={() => setIsMobileMenuOpen(false)}
+      ></div>
     </nav>
   );
 };

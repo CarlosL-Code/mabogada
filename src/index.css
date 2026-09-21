@@ -64,6 +64,12 @@ ul {
   padding: 0 2rem; /* Keep padding for constrained sections */
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem; /* Ensure proper padding on small screens to avoid touching edges */
+  }
+}
+
 /* Base button */
 .section-title-clean {
   color: var(--primary-color);

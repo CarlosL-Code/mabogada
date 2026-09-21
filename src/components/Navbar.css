@@ -158,36 +158,68 @@
 
 @media (max-width: 1024px) {
   .nav-links {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: white;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--primary-dark);
     flex-direction: column;
-    padding: 2rem 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transform: translateY(-150%);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.4s ease;
+    padding: 100px 2rem 2rem 2rem;
+    box-shadow: -10px 0 20px rgba(0,0,0,0.2);
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    transition: right 0.4s ease;
+    z-index: 999;
   }
   
   .nav-links.active {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
+    right: 0;
   }
   
   .nav-links a {
-    color: var(--secondary-color);
+    color: white !important;
     font-size: 1.1rem;
     padding: 15px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav-links a::after {
+    display: none;
   }
   
   .mobile-menu-btn {
     display: flex;
     align-items: center;
+    color: white; /* Make sure it's visible over the dark menu */
   }
+  
+  .navbar.scrolled .mobile-menu-btn {
+    color: var(--secondary-color);
+  }
+  
+  /* When menu is open, force close button to be white */
+  .nav-links.active ~ .navbar-right .mobile-menu-btn {
+    color: white !important;
+  }
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.6);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 @media (max-width: 768px) {

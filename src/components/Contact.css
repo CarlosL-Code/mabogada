@@ -185,4 +185,7 @@
   .channel {
     justify-content: center;
   }
+  .contact-cta-form-card {
+    padding: 2rem 1.2rem; /* Much less padding so inputs fit well on small phones */
+  }
 }
