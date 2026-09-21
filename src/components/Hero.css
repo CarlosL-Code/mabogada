@@ -1,0 +1,139 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-slider-container {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-slide-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  /* Transición sutil de aparición (fade) */
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide-active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide-prev,
+.slide-next, 
+.slide-hidden {
+  opacity: 0;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 25, 47, 0.45);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.hero-text-container {
+  position: relative;
+  max-width: 800px;
+  margin-top: 50px;
+}
+
+/* Cuadrado azul desplazado (offset square) */
+.hero-blue-box {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 180px;
+  height: 180px;
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+.hero-text h1 {
+  color: white;
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+.hero-text p {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 650px;
+}
+
+.hero-bullets {
+  display: flex;
+  gap: 12px;
+  margin-top: 4rem;
+}
+
+.bullet {
+  width: 40px;
+  height: 4px;
+  background-color: rgba(255,255,255,0.4);
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bullet.active {
+  background-color: var(--primary-color);
+}
+
+/* Animación sutil para los textos hacia el lado */
+.fade-in-side {
+  animation: fadeSide 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes fadeSide {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+  .hero-blue-box {
+    width: 120px;
+    height: 120px;
+  }
+}

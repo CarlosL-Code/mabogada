@@ -1,0 +1,189 @@
+.process-dynamic-section {
+  background-color: var(--bg-white);
+  padding: 8rem 0;
+}
+
+.process-dynamic-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+}
+
+.process-dynamic-header .section-accent {
+  justify-content: center;
+}
+
+.process-dynamic-header h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.process-dynamic-header p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.process-tabs-container {
+  display: flex;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: var(--bg-color); /* Light grey */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+}
+
+.process-tabs-list {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-right: 1px solid var(--border-color);
+}
+
+.process-tab-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.process-tab-btn:last-child {
+  border-bottom: none;
+}
+
+.process-tab-btn:hover {
+  background-color: rgba(0, 86, 179, 0.03);
+}
+
+.process-tab-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.tab-number {
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.process-tab-btn.active .tab-number {
+  color: rgba(255,255,255,0.7);
+}
+
+.tab-title {
+  flex: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+
+.process-tab-btn.active .tab-title {
+  color: white;
+}
+
+.tab-arrow {
+  font-size: 1.5rem;
+  color: var(--border-color);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.process-tab-btn.active .tab-arrow {
+  color: white;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.process-tab-content {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 480px; /* Fix height jump when clicking tabs */
+}
+
+.tab-content-inner {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.content-icon {
+  font-size: 5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.tab-content-inner h3 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+}
+
+.tab-content-inner h3 span {
+  color: var(--primary-color);
+  opacity: 0.5;
+}
+
+.tab-content-inner p {
+  font-size: 1.15rem;
+  color: var(--text-main);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.rep-legal-mini {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  background-color: white;
+  padding: 1.5rem;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.mini-shield {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.rep-legal-mini div {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .process-tabs-container {
+    flex-direction: column;
+  }
+  .process-tabs-list {
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  .process-tab-content {
+    padding: 2rem;
+  }
+}

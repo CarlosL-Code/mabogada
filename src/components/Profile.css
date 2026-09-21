@@ -1,0 +1,82 @@
+.profile-section {
+  background-color: var(--bg-white);
+}
+
+.profile-content-wrapper {
+  padding: 6rem 4rem 6rem 10%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-content h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.profile-text {
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  line-height: 1.8;
+}
+
+.profile-text p {
+  margin-bottom: 1rem;
+}
+
+.profile-image-wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background-color: #f4f6f8; /* Un fondo sutil por si hay espacios */
+  width: 100%;
+}
+
+.profile-img-real {
+  width: 100%;
+  height: 100%;
+  /* Usamos contain para garantizar que JAMÁS se corte ni un pixel de la persona, 
+     y object-position en bottom para que se alinee naturalmente abajo */
+  object-fit: contain; 
+  object-position: bottom center;
+  min-height: 500px;
+}
+
+@media (max-width: 1024px) {
+  .profile-section {
+    flex-direction: column;
+  }
+  
+  .profile-content-wrapper {
+    padding: 4rem 2rem;
+  }
+  
+  .profile-image-wrapper {
+    min-height: 500px;
+  }
+  
+  .profile-img-real {
+    object-fit: cover; /* En movil mejor que llene el espacio */
+    object-position: top center;
+  }
+  
+  .icon-badge {
+    display: none;
+  }
+}

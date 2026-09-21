@@ -1,0 +1,188 @@
+.contact-cta-section {
+  position: relative;
+  padding: 8rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-cta-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  /* Utiliza la imagen que dejó el usuario en assets */
+  background-image: url('/src/assets/fondo-cta-final.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+  z-index: 1;
+}
+
+.contact-cta-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 25, 47, 0.55); /* Lighter overlay so the image is visible */
+  z-index: 2;
+}
+
+.contact-cta-container {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Info Left Side */
+.contact-cta-info {
+  color: white;
+}
+
+.contact-cta-info h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  color: white; /* Explicitly set to white to override global styles */
+}
+
+.contact-cta-info > p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.channel {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.channel-icon {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.channel h5 {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.3rem;
+}
+
+.channel a {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.channel a:hover {
+  color: var(--accent-color);
+}
+
+/* Form Right Side */
+.contact-cta-form-card {
+  background-color: white;
+  padding: 4rem;
+  border-radius: 8px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+.contact-cta-form-card h3 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.contact-cta-form-card > p {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.real-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-white);
+  border-radius: 4px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.form-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .contact-cta-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-cta-info {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .contact-cta-info > p {
+    margin: 0 auto 3rem auto;
+  }
+  .contact-channels {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .contact-cta-form-card {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-channels {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .channel {
+    justify-content: center;
+  }
+}
