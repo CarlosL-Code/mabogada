@@ -7,6 +7,7 @@ import ConstitutionProcess from './components/ConstitutionProcess';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </>
   );
 }

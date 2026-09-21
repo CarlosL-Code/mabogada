@@ -158,7 +158,30 @@
 
 @media (max-width: 1024px) {
   .nav-links {
-    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    padding: 2rem 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+  }
+  
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .nav-links a {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    padding: 15px 0;
   }
   
   .mobile-menu-btn {
